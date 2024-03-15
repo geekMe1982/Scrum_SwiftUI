@@ -10,15 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ProgressView(value: 10, total: 15)
+            HStack {
+                Text("Seconds Elapsed")
+                Text("Seconds Remaining")
+            }
         }
         .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct MeetingView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
